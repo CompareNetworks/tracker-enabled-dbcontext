@@ -83,8 +83,6 @@
     <Compile Include="Extensions\EntityTypeConfigurationExtensions.cs" />
     <Compile Include="Interfaces\ILogDetailsAuditor.cs" />
     <Compile Include="Interfaces\IUnTrackable.cs" />
-    <Compile Include="Attributes\SkipTrackingAttribute.cs" />
-    <Compile Include="Attributes\TrackChangesAttribute.cs" />
     <Compile Include="Configuration\GlobalTrackingConfig.cs" />
     <Compile Include="Configuration\TrackingDataStore.cs" />
     <Compile Include="Configuration\PropertyTrackingConfiguration.cs" />
@@ -114,7 +112,15 @@
       <SubType>Designer</SubType>
     </None>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Attributes\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TrackerEnabledDbContext.Domain\TrackerEnabledDbContext.Domain.csproj">
+      <Project>{de56f46b-ddb5-4506-9e0c-cec6002cd06c}</Project>
+      <Name>TrackerEnabledDbContext.Domain</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

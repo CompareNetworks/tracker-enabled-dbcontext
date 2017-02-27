@@ -79,6 +79,10 @@
       <Project>{ac9808cc-8932-40ae-8f26-3fba558a5549}</Project>
       <Name>TrackerEnabledDbContext.Common</Name>
     </ProjectReference>
+    <ProjectReference Include="..\TrackerEnabledDbContext.Domain\TrackerEnabledDbContext.Domain.csproj">
+      <Project>{de56f46b-ddb5-4506-9e0c-cec6002cd06c}</Project>
+      <Name>TrackerEnabledDbContext.Domain</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
